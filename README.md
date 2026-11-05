@@ -34,5 +34,4 @@ The fleet scenario uses predicted 95th-percentile hourly trip starts multiplied 
 5. Run `streamlit run app.py`; ask “Should we buy more bikes?” and “How many bikes do we need for a 30 minute trip?”
 6. Explain why station-level data are needed before any capital expenditure decision.
 
-## Dataset attribution
-Fanaee-T, H. and Gama, J. (2013), “Event labeling combining ensemble detectors and background knowledge,” *Progress in Artificial Intelligence*, DOI: 10.1007/s13748-013-0040-3.
+
