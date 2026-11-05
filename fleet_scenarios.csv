@@ -1,0 +1,7 @@
+assumed_avg_trip_minutes,target_fleet_utilization,estimated_citywide_active_bikes_p95,illustrative_fleet_required
+15,0.7,137,196
+15,0.85,137,161
+30,0.7,274,391
+30,0.85,274,322
+45,0.7,411,587
+45,0.85,411,483

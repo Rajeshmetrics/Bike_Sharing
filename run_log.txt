@@ -1,0 +1,114 @@
+{
+  "quality": {
+    "hour_rows": 17379,
+    "day_rows": 731,
+    "hour_null_cells": 0,
+    "day_null_cells": 0,
+    "hour_duplicate_timestamps": 0,
+    "day_duplicate_dates": 0,
+    "hour_cnt_identity_failures": 0,
+    "day_cnt_identity_failures": 0,
+    "negative_hour_counts": 0,
+    "daily_hourly_total_mismatch_days": 0,
+    "missing_hour_slots": 165,
+    "date_start": "2011-01-01",
+    "date_end": "2012-12-31"
+  },
+  "hypothesis": {
+    "hypothesis": "Working-day commute peak (07-09, 17-19) hourly rental demand exceeds other working-day hours",
+    "peak_hour_mean": 396.00569896077775,
+    "other_hour_mean": 125.09851384823239,
+    "difference": 270.90718511254533,
+    "welch_t_stat": 68.18929601152747,
+    "welch_p_value": 0.0,
+    "day_block_bootstrap_mean_difference": 270.586458537991,
+    "day_block_bootstrap_ci95": [
+      260.1214845499823,
+      280.47169344817087
+    ],
+    "working_days_with_both_groups": 499,
+    "caveat": "Observational association; Welch test ignores within-day dependence, so day-level bootstrap is preferred for uncertainty. Not a causal effect."
+  },
+  "models": {
+    "mean_baseline": {
+      "validation": {
+        "MAE": 192.6691723800832,
+        "RMSE": 255.31777589236196,
+        "R2": -0.16315745879431942
+      },
+      "test": {
+        "MAE": 139.50691816394587,
+        "RMSE": 174.48605844838437,
+        "R2": -0.0005454754168343623
+      }
+    },
+    "random_forest": {
+      "validation": {
+        "MAE": 45.090854507485226,
+        "RMSE": 71.60885954313218,
+        "R2": 0.9085023543946578
+      },
+      "test": {
+        "MAE": 50.30163623854392,
+        "RMSE": 75.05846961457735,
+        "R2": 0.8148538104737627
+      }
+    },
+    "hist_gradient_boosting": {
+      "validation": {
+        "MAE": 42.90880792609239,
+        "RMSE": 66.66503688439904,
+        "R2": 0.9207000976960265
+      },
+      "test": {
+        "MAE": 44.45926056608024,
+        "RMSE": 68.63485742110538,
+        "R2": 0.8451879222054648
+      }
+    }
+  },
+  "selected_model": "hist_gradient_boosting",
+  "final_test": {
+    "MAE": 43.22855764353777,
+    "RMSE": 67.72019785751246,
+    "R2": 0.8492866218236508
+  },
+  "fleet_scenarios": [
+    {
+      "assumed_avg_trip_minutes": 15,
+      "target_fleet_utilization": 0.7,
+      "estimated_citywide_active_bikes_p95": 138,
+      "illustrative_fleet_required": 198
+    },
+    {
+      "assumed_avg_trip_minutes": 15,
+      "target_fleet_utilization": 0.85,
+      "estimated_citywide_active_bikes_p95": 138,
+      "illustrative_fleet_required": 163
+    },
+    {
+      "assumed_avg_trip_minutes": 30,
+      "target_fleet_utilization": 0.7,
+      "estimated_citywide_active_bikes_p95": 276,
+      "illustrative_fleet_required": 395
+    },
+    {
+      "assumed_avg_trip_minutes": 30,
+      "target_fleet_utilization": 0.85,
+      "estimated_citywide_active_bikes_p95": 276,
+      "illustrative_fleet_required": 325
+    },
+    {
+      "assumed_avg_trip_minutes": 45,
+      "target_fleet_utilization": 0.7,
+      "estimated_citywide_active_bikes_p95": 414,
+      "illustrative_fleet_required": 592
+    },
+    {
+      "assumed_avg_trip_minutes": 45,
+      "target_fleet_utilization": 0.85,
+      "estimated_citywide_active_bikes_p95": 414,
+      "illustrative_fleet_required": 488
+    }
+  ]
+}
